@@ -5,6 +5,8 @@ class ProductoController{
 
     public function ctrIndexProducto()
     {
-       echo "Funcion index del controlador PRODUCTO";
+    //Mostrare la vista 
+    require_once('./views/producto/index.php');
+
     }
 }

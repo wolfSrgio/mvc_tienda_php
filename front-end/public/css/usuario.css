@@ -1,0 +1,12 @@
+.user-content {
+  height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-form {
+  border: 1px solid rgba(241, 233, 233, 0.582);
+  padding: 30px;
+  width: 50%;
+}
