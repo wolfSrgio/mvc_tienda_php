@@ -6,8 +6,8 @@
      
     </div>
 
-    <script src="<?=$url?>public/js/jquery-3.5.1.min.js"></script>
-    <script src="<?=$url?>./public/js/bootstrap.min.js"></script>
-     <script src="<?=$url?>./public/js/popper.min.js"></script>
+    <script src="<?=URL_BASE?>public/js/jquery-3.5.1.min.js"></script>
+    <script src="<?=URL_BASE?>./public/js/bootstrap.min.js"></script>
+     <script src="<?=URL_BASE?>./public/js/popper.min.js"></script>
 </body>
 </html>

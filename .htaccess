@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+ErrorDocument 404 http://localhost/1_php/c_masterPHP/e_Proyecto_carrito/error/
+
+
+RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt)$
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+ RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]+)? index.php?controler=$1&metodo=$2
+ </IfModule>

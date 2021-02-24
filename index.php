@@ -3,16 +3,19 @@
 
  
  require_once('./autoload.php');
-
- $url="http://localhost/1_php/c_masterPHP/e_Proyecto_carrito/front-end/";
- 
+  require_once('./config/parameters.php');
  require_once('./views/layout/header.php');
 
-
 //AQUI MOSTRAREMOS EL CONTENIDO O CUERPO: que ira cambiando segun el controlador y su metodo
-
  
+
+ ?>
+ 
+ <?php
+
 if(isset($_GET['controler'])){
+
+  
       /* Para URL tipo :
      http://localhost/1_php/c_masterPHP/e_Proyecto_carrito/?controler=producto
     */
@@ -22,10 +25,12 @@ if(isset($_GET['controler'])){
  
     if(class_exists($nameController)){
                
-                $controlador=new $nameController();//CREANDO CONTROLADOR
+     
+        $controlador=new $nameController();//CREANDO CONTROLADOR
              
             
-                if(isset($_GET['metodo'])){
+      if(isset($_GET['metodo']) && $_GET['metodo']!==''){
+                
                 /*Para url tipo :
                  http://localhost/1_php/c_masterPHP/e_Proyecto_carrito/?controler=producto&metodo=index
                */  
@@ -50,13 +55,12 @@ if(isset($_GET['controler'])){
                                       */ 
                                 echo "<h1 style='color:red'>ERROR 404 , pagina NOT FOUND - method</h1>";
                         }
-                }else{
+        }else{
                     /*Para url tipo :
                     http://localhost/1_php/c_masterPHP/e_Proyecto_carrito/?controler=producto 
                    */ 
                     
-                   
-                    if(count($_GET)==1){
+                if($_GET['metodo']===''){
                       require_once('./views/layout/main.php');
                        $metodo="ctrIndex".$_GET['controler'];
                        $controlador->$metodo(); //METODO POR DEFECTO- que invocara una la vista ndex de ese controlador
@@ -73,8 +77,10 @@ if(isset($_GET['controler'])){
                 }
 
     }else{
-        echo "<h1 style='color:red'>ERROR 404 , pagina NOT FOUND - class</h1>";
-        exit();
+      //mostrando Error con el controlador Error
+      $erore=new ErrorController();
+      $metodo="ctrIndexError";
+      $erore->$metodo(); 
     }
     
   
@@ -93,8 +99,10 @@ require_once('./views/layout/sidebar.php');
 }
 
 
+
 require_once('./views/layout/footer.php');
 
 ?>
+
 
 

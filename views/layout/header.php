@@ -1,14 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=$url?>public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?=$url?>public/css/main.css">
-    <link rel="stylesheet" href="<?=$url?>public/css/index.css">
-    <link rel="stylesheet" href="<?=$url?>public/css/usuario.css">
+    <link rel="stylesheet" href="<?=URL_BASE?>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=URL_BASE?>public/css/main.css">
+    <link rel="stylesheet" href="<?=URL_BASE?>public/css/index.css">
     <title>tienda_mvc</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
             <header id="cabezera">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                    <div class='header__logo'>
-                          <img src="<?=$url?>assets/logo_cabezera.jpg" alt="logo"
+                          <img src="<?=URL_BASE?>assets/logo_cabezera.jpg" alt="logo"
                          class='logo_cabezera'> 
                        
                    </div>

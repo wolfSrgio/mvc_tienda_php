@@ -2,7 +2,8 @@
 <div class="user-content">
         <div class="user-form"  >
             <h4 class='text-center'>Registro de Usuario</h4>
-            <form action="index.php?controler=usuario&metodo=save" method='post'>
+            <!-- <form action="../producto" method='post'> -->
+                 <form action="save" method='post'> 
                 <div class="form-group row">
                     <label  class="col-2 col-md-12 col-form-label">Nombre</label>
                     <div class="col-10 col-md-12">
